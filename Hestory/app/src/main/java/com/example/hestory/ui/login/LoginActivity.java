@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity {
                         passwordEditText.getText().toString());
                 //@todo: check validity - email is in db && password matches
                 MutableLiveData<LoginResult> result = (MutableLiveData<LoginResult>) loginViewModel.getLoginResult();
-                if (false) {
+                if (true) {
                     Log.d("success", "passed login");
                     openHomePage();
                 }
