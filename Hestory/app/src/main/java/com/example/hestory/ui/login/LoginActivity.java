@@ -26,6 +26,7 @@ import android.util.Log;
 
 import com.example.hestory.HomeActivity;
 import com.example.hestory.R;
+import com.example.hestory.ui.register.RegisterActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
