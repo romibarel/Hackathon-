@@ -34,7 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
         final EditText FirstnameEditText = findViewById(R.id.firstName_register);
         final EditText phoneEditText = findViewById(R.id.editTextPhone_register);
         final EditText organiztionEditText = findViewById(R.id.organiztion_register);
-        final Button registerButton = findViewById(R.id.login);
+        final Button registerButton = findViewById(R.id.login_register);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
