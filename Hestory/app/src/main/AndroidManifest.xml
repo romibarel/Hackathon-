@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hestory">
-        <activity android:name=".ui.register.RegisterActivity"></activity>
-        <activity android:name=".AddStoryActivity" />
+        <activity android:name=".ui.add_story.AddStoryActivity"></activity>
+        <activity android:name=".ui.register.RegisterActivity" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
@@ -25,5 +25,6 @@
             </intent-filter>
         </activity>
     </application>
-
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 </manifest>

@@ -3,9 +3,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="20dp"
     android:layout_height="match_parent"
-    tools:context=".AddStoryActivity">
+    tools:context=".ui.add_story.AddStoryActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/imagetoupload"
+            android:layout_width="311dp"
+            android:layout_height="320dp"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/short_desc"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="Story's Short Descreption" />
+
+        <EditText
+            android:id="@+id/country"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="Story's Country" />
+        <EditText
+            android:id="@+id/hero"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="Hero's name" />
+
+        <EditText
+            android:id="@+id/date_of_story"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:inputType="date"
+            android:hint="Date of Story" />
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="Contact information" />
+
+        <EditText
+            android:id="@+id/full_desc"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="Story Full Descreption" />
+
+        <Button
+            android:id="@+id/upload_story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backgroundTint="#51C0DC"
+            tools:text="Upload Story" />
+    </LinearLayout>
+</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--this is the window to add a story with all its details-->
