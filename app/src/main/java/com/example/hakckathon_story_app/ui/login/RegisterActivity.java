@@ -26,7 +26,7 @@ import com.example.hakckathon_story_app.R;
 import com.example.hakckathon_story_app.ui.login.LoginViewModel;
 import com.example.hakckathon_story_app.ui.login.LoginViewModelFactory;
 
-public class LoginActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
 
