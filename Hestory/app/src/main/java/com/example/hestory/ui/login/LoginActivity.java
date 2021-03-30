@@ -2,6 +2,7 @@ package com.example.hestory.ui.login;
 
 import android.app.Activity;
 
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -41,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
 
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
+        final TextView login_error = findViewById(R.id.login_Error);
+        login_error.setVisibility(View.INVISIBLE);
         final Button loginButton = findViewById(R.id.login);
         final Button registerButton = findViewById(R.id.register);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
@@ -119,8 +122,15 @@ public class LoginActivity extends AppCompatActivity {
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
                 //@todo: check validity - email is in db && password matches
-                openHomePage();
-                Log.d("success", "passed login");
+                MutableLiveData<LoginResult> result = (MutableLiveData<LoginResult>) loginViewModel.getLoginResult();
+                if (false) {
+                    Log.d("success", "passed login");
+                    openHomePage();
+                }
+                else {
+                    login_error.setText("error message");
+                    login_error.setVisibility(View.VISIBLE);
+                }
             }
         });
 
