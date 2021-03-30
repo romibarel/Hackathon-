@@ -24,8 +24,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hestory.R;
-import com.example.hestory.ui.login.LoginViewModel;
-import com.example.hestory.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
