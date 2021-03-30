@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "hakckathon_story_app"
