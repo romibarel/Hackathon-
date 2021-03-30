@@ -17,14 +17,13 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final ProgressBar loadingProgressBar = findViewById(R.id.loading);
-        final ImageButton addButton = (ImageButton) findViewById(R.id.addButton);
         setContentView(R.layout.activity_home);
+        final Button addButton = findViewById(R.id.addButton);
+
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadingProgressBar.setVisibility(View.VISIBLE);
                 openAddStoryActivity();
                 Log.d("success", "opened reg");
             }
