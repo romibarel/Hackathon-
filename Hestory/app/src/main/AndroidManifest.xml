@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hestory">
-        <activity android:name=".AddStoryActivity"></activity>
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.Hestory.NoActionBar" />
+            android:theme="@style/Theme.Hestory.NoActionBar"></activity>
+        <activity android:name=".AddStoryActivity" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/app_name">
