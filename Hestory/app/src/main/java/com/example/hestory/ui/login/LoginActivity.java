@@ -22,7 +22,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Log;
 
+import com.example.hestory.HomeActivity;
 import com.example.hestory.R;
 import com.example.hestory.ui.register.RegisterActivity;
 
@@ -116,6 +118,9 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
+                //check validity
+                openHomePage();
+                Log.d("success", "passed login");
             }
         });
 
@@ -124,9 +129,15 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 openRegisterActivity();
+                Log.d("success", "opened reg");
             }
         });
     }
+    private void openHomePage(){
+        Intent homepage = new Intent(this, HomeActivity.class);
+        startActivity(homepage);
+    }
+
     private void openRegisterActivity() {
         Intent register = new Intent(this, RegisterActivity.class);
         startActivity(register);
