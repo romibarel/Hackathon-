@@ -12,11 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -25,8 +21,6 @@ import android.widget.Toast;
 
 import com.example.hestory.R;
 import com.example.hestory.ui.login.LoginActivity;
-import com.example.hestory.ui.login.LoginViewModelFactory;
-
 public class RegisterActivity extends AppCompatActivity {
 
     @Override
@@ -34,14 +28,13 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        final EditText usernameEditText = findViewById(R.id.username);
-        final EditText passwordEditText = findViewById(R.id.password);
-        final EditText LastnameEditText = findViewById(R.id.lastName);
-        final EditText FirstnameEditText = findViewById(R.id.firstName);
-        final EditText phoneEditText = findViewById(R.id.editTextPhone);
-        final EditText organiztionEditText = findViewById(R.id.organiztion);
+        final EditText usernameEditText = findViewById(R.id.username_register);
+        final EditText passwordEditText = findViewById(R.id.password_register);
+        final EditText LastnameEditText = findViewById(R.id.lastName_register);
+        final EditText FirstnameEditText = findViewById(R.id.firstName_register);
+        final EditText phoneEditText = findViewById(R.id.editTextPhone_register);
+        final EditText organiztionEditText = findViewById(R.id.organiztion_register);
         final Button registerButton = findViewById(R.id.login);
-        final ProgressBar loadingProgressBar = findViewById(R.id.loading);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +48,4 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void showRegisterinFailed(@StringRes Integer errorString) {
-        Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
-    }
 }
