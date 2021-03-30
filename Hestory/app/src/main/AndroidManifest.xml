@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hestory">
-        <activity android:name=".AddStoryActivity"></activity>
+        <activity android:name=".ui.register.RegisterActivity"></activity>
+        <activity android:name=".AddStoryActivity" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"

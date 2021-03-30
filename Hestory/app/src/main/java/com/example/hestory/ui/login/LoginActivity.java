@@ -24,7 +24,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hestory.R;
-import com.example.hestory.ui.register.RegisterActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
