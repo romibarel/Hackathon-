@@ -119,11 +119,18 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
+                loginViewModel.login(
+                        usernameEditText.getText().toString(),
+                        passwordEditText.getText().toString()
+                );
                 //@todo: check validity - email is in db && password matches
                 MutableLiveData<LoginResult> result = (MutableLiveData<LoginResult>) loginViewModel.getLoginResult();
-                if (true) {
+                String username =  usernameEditText.getText().toString();
+                String password =  passwordEditText.getText().toString();
+                boolean check_if_login_Worked =
+                        username.equals("yosi")  &&
+                                password.equals("12345S");
+                if (check_if_login_Worked) {
                     Log.d("success", "passed login");
                     openHomePage();
                 }
