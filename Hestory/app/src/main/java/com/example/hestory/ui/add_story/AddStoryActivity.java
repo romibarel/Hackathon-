@@ -17,28 +17,30 @@ import com.example.hestory.R;
 public class AddStoryActivity extends AppCompatActivity implements View.OnClickListener {
     private static final int RESULT_LOAD_IMAGE=1;
     private ImageView imageToUpload;
-    private Button upload_story;
+    private Button upload_story, add_image;
     private EditText name, date, short_desc,full_desc, contact_info, country;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_story);
         upload_story= findViewById(R.id.upload_story);
+        add_image= findViewById(R.id.upload_img);
         imageToUpload=findViewById(R.id.imagetoupload);
+        imageToUpload.setVisibility(View.GONE);
         name=findViewById(R.id.hero);
         date=findViewById(R.id.date_of_story);
         short_desc=findViewById(R.id.short_desc);
         full_desc=findViewById(R.id.full_desc);
         country=findViewById(R.id.country);
         contact_info=findViewById(R.id.contact);
-        imageToUpload.setOnClickListener(this);
+        add_image.setOnClickListener(this);
         upload_story.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.imagetoupload:
+            case R.id.upload_img:
                 Intent galleryIntent= new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
                 break;
@@ -52,6 +54,7 @@ public class AddStoryActivity extends AppCompatActivity implements View.OnClickL
         if(requestCode==RESULT_LOAD_IMAGE&&resultCode==RESULT_OK&& data!=null){
             Uri selected_image=data.getData();
             imageToUpload.setImageURI(selected_image);
+            imageToUpload.setVisibility(View.VISIBLE);
         }
     }
 }
