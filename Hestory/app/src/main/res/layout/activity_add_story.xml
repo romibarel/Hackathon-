@@ -31,9 +31,10 @@
                 android:id="@+id/upload_img"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Choose Picture"
                 android:textColor="@color/white"
                 app:backgroundTint="#51C0DC"
-                tools:text="Choose Picture" />
+                 />
 
             <EditText
                 android:id="@+id/short_desc"
@@ -84,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 app:backgroundTint="#51C0DC"
-                tools:text="Upload Story" />
+                android:text="Upload Story" />
         </LinearLayout>
     </ScrollView>
 

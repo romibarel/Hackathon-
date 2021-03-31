@@ -135,8 +135,10 @@ public class LoginActivity extends AppCompatActivity {
                     openHomePage();
                 }
                 else {
-                    login_error.setText("error message");
+                    login_error.setText("Wrong password / username");
                     login_error.setVisibility(View.VISIBLE);
+                    Log.d("Fail", "Failed login");
+                    reloadMe();
                 }
             }
         });
@@ -153,6 +155,10 @@ public class LoginActivity extends AppCompatActivity {
     private void openHomePage(){
         Intent homepage = new Intent(this, HomeActivity.class);
         startActivity(homepage);
+    }
+    private void reloadMe(){
+        Intent login = new Intent(this, LoginActivity.class);
+        startActivity(login);
     }
 
     private void openRegisterActivity() {
