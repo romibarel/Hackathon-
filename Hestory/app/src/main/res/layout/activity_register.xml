@@ -7,6 +7,22 @@
     tools:context=".ui.register.RegisterActivity">
 
     <TextView
+        android:id="@+id/login_Error2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Hero aasdasdasd"
+        android:textColor="#F30606"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/back_to_login"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/back_to_login"
+        app:layout_constraintTop_toBottomOf="@+id/back_to_login"
+        app:layout_constraintVertical_bias="0.363"
+        tools:visibility="invisible" />
+
+    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,11 +76,10 @@
         android:textSize="18sp"
         app:backgroundTint="#51C0DC"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/organization_register"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/organization_register"
+        app:layout_constraintEnd_toEndOf="@+id/phone_register"
+        app:layout_constraintStart_toStartOf="@+id/phone_register"
         app:layout_constraintTop_toBottomOf="@+id/phone_register"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.185" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -121,20 +136,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
         app:layout_constraintVertical_bias="0.264" />
-
-    <EditText
-        android:id="@+id/organization_register"
-        android:layout_width="268dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Organiztion- optional"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone_register"
-        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
